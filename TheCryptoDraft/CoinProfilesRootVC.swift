@@ -11,12 +11,16 @@ import UIKit
 class CoinProfilesRootVC: BaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
-        UINavigationController.setupNavigationControllerWith(title: "Coin Profiles", navigationController: navigationController)
-        
+        setupNavigationBar()
         // MAKE REQUEST FOR EXISTING COIN PROFILES?  Create a request object
         // if 0 coinprofiles
         showNoCoinProfileText()
         // if >0 coinprofiles
+    }
+    
+    func setupNavigationBar() {
+        UINavigationController.setupNavigationControllerWith(title: "Coin Profiles", navigationController: navigationController)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "+", style: .plain, target: self, action: #selector(addTapped))
     }
     
     func showNoCoinProfileText() {
@@ -32,6 +36,26 @@ class CoinProfilesRootVC: BaseVC {
         noCoinTextLabel.constrainHeightTo(dimension: view.heightAnchor, multiplier: 0.25)
         noCoinTextLabel.constrainCenterXTo(anchor: view.centerXAnchor)
         noCoinTextLabel.constrainCenterYTo(anchor: view.centerYAnchor)
+    }
+    
+    @objc func addTapped() {
+        print("+ Tapped")
+        let coinProfileNamingAlertController = UIAlertController(title: "Coin Profile", message: "Enter a Profile Name", preferredStyle: .alert)
+        coinProfileNamingAlertController.addTextField { textField in
+            textField.placeholder = "Enter Coin Profile Name"
+        }
+        let submitAction = UIAlertAction(title: "Submit", style: .default, handler: { [weak self] alert in
+            if let coinProfileName = coinProfileNamingAlertController.textFields?[0].text {
+                print(coinProfileName)
+                let coinProfileSetupVC = CoinProfileSetupVC()
+                coinProfileSetupVC.title = coinProfileName
+                self?.navigationController?.pushViewController(coinProfileSetupVC, animated: true)
+            }
+        })
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        coinProfileNamingAlertController.addAction(submitAction)
+        coinProfileNamingAlertController.addAction(cancelAction)
+        present(coinProfileNamingAlertController, animated: true, completion: nil)
     }
 }
 

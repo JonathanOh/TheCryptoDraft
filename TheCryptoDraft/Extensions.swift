@@ -13,7 +13,7 @@ extension UINavigationController {
         if let navigationController = navigationController {
             navigationController.navigationBar.barTintColor = Colors.TCDBlue
             navigationController.navigationBar.isTranslucent = false
-            
+            navigationController.navigationBar.tintColor = .white
             let textAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]//[NSAttributedStringKey.foregroundColor:UIColor.red]
             navigationController.navigationBar.titleTextAttributes = textAttributes
             navigationController.navigationBar.topItem?.title = title

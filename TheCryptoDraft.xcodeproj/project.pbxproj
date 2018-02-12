@@ -18,6 +18,7 @@
 		849C925A202EAB65009B3247 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C9259202EAB65009B3247 /* Extensions.swift */; };
 		849C925C20314B22009B3247 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C925B20314B22009B3247 /* Constants.swift */; };
 		849C925E20314C0F009B3247 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C925D20314C0F009B3247 /* BaseVC.swift */; };
+		849C926020317C5F009B3247 /* CoinProfileSetupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C925F20317C5F009B3247 /* CoinProfileSetupVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		849C9259202EAB65009B3247 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		849C925B20314B22009B3247 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		849C925D20314C0F009B3247 /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+		849C925F20317C5F009B3247 /* CoinProfileSetupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinProfileSetupVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				849C925D20314C0F009B3247 /* BaseVC.swift */,
 				849C9253202EA8B7009B3247 /* YourLeagueRootVC.swift */,
 				849C9255202EA90D009B3247 /* CoinProfilesRootVC.swift */,
+				849C925F20317C5F009B3247 /* CoinProfileSetupVC.swift */,
 				849C9257202EA918009B3247 /* AccountRootVC.swift */,
 				849C9259202EAB65009B3247 /* Extensions.swift */,
 				849C925B20314B22009B3247 /* Constants.swift */,
@@ -163,6 +166,7 @@
 				849C9254202EA8B7009B3247 /* YourLeagueRootVC.swift in Sources */,
 				849C925C20314B22009B3247 /* Constants.swift in Sources */,
 				84521659202E9772001A1F15 /* AppDelegate.swift in Sources */,
+				849C926020317C5F009B3247 /* CoinProfileSetupVC.swift in Sources */,
 				849C9258202EA918009B3247 /* AccountRootVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,7 +309,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.esohjay.TheCryptoDraft;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -319,7 +323,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.esohjay.TheCryptoDraft;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
