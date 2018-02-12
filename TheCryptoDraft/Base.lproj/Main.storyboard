@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Account-->
+        <scene sceneID="0lu-fv-27J">
+            <objects>
+                <navigationController id="Pp1-oa-pPz" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Account" image="second" id="Gi6-Ip-k17"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fqQ-r3-LHD">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ZPl-i1-jHE" kind="relationship" relationship="rootViewController" id="72n-Ez-6ct"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xAn-Mn-WSb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="1371"/>
+        </scene>
+        <!--Account RootVC-->
+        <scene sceneID="8fo-6O-Y7Q">
+            <objects>
+                <viewController id="ZPl-i1-jHE" customClass="AccountRootVC" customModule="TheCryptoDraft" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tg2-aw-Rw1"/>
+                        <viewControllerLayoutGuide type="bottom" id="I18-L7-Aag"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="axr-yd-59N">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="efe-ba-e4Z"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Del-1d-qG7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1513" y="1370"/>
+        </scene>
+        <!--Coin Profiles-->
+        <scene sceneID="eeT-Ea-5Xx">
+            <objects>
+                <navigationController id="ZfW-UK-m5K" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Coin Profiles" image="first" id="aXa-Vm-U7v"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Pj7-VL-B6X">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Qa5-lo-cLQ" kind="relationship" relationship="rootViewController" id="gly-IA-gda"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zpV-Oi-fBm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="670"/>
+        </scene>
+        <!--Coin Profiles RootVC-->
+        <scene sceneID="X1p-GM-boC">
+            <objects>
+                <viewController id="Qa5-lo-cLQ" customClass="CoinProfilesRootVC" customModule="TheCryptoDraft" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zYH-ma-Qvx"/>
+                        <viewControllerLayoutGuide type="bottom" id="2lh-Ih-D8O"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AZc-ff-HVt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vaL-aX-9rv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CfN-t8-8zv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1513" y="670"/>
+        </scene>
+        <!--Your Leagues-->
+        <scene sceneID="m7c-qp-wsp">
+            <objects>
+                <navigationController id="vI3-5J-YvT" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Your Leagues" image="second" id="NI4-EM-PVh"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="siy-ry-T1s">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="67K-IG-EAq" kind="relationship" relationship="rootViewController" id="H1S-iX-agw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sbs-ph-piG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="-38"/>
+        </scene>
+        <!--Your League RootVC-->
+        <scene sceneID="DZZ-p0-5r9">
+            <objects>
+                <viewController id="67K-IG-EAq" customClass="YourLeagueRootVC" customModule="TheCryptoDraft" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yJg-fx-kZa"/>
+                        <viewControllerLayoutGuide type="bottom" id="atE-9s-s79"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7vd-BV-Ode">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="AUm-7X-CbT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bkh-nZ-rLq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1513" y="-38"/>
+        </scene>
+        <!--Join League-->
+        <scene sceneID="qU8-MZ-eZj">
+            <objects>
+                <navigationController id="OFO-4J-oLF" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Join League" image="first" id="hzy-fX-EIG"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jMt-Fu-njc">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="jjS-4N-658" kind="relationship" relationship="rootViewController" id="X85-1A-pLU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OcH-B5-Mpv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="751" y="-732"/>
+        </scene>
+        <!--Join League RootVC-->
+        <scene sceneID="Fa5-0U-hrj">
+            <objects>
+                <viewController id="jjS-4N-658" customClass="JoinLeagueRootVC" customModule="TheCryptoDraft" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gLu-72-pub"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZY1-ha-cL0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8Bt-dF-lPH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="HBz-dn-CIB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0BY-KH-O1T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1513" y="-733"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="OFO-4J-oLF" kind="relationship" relationship="viewControllers" id="JDd-zB-Nbq"/>
+                        <segue destination="vI3-5J-YvT" kind="relationship" relationship="viewControllers" id="jUD-to-elM"/>
+                        <segue destination="ZfW-UK-m5K" kind="relationship" relationship="viewControllers" id="R2U-V4-eZG"/>
+                        <segue destination="Pp1-oa-pPz" kind="relationship" relationship="viewControllers" id="Qns-t8-I4B"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="first" width="30" height="30"/>
+        <image name="second" width="30" height="30"/>
+    </resources>
+</document>
