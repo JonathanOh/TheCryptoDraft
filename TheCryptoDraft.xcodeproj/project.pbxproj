@@ -19,6 +19,7 @@
 		849C925C20314B22009B3247 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C925B20314B22009B3247 /* Constants.swift */; };
 		849C925E20314C0F009B3247 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C925D20314C0F009B3247 /* BaseVC.swift */; };
 		849C926020317C5F009B3247 /* CoinProfileSetupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C925F20317C5F009B3247 /* CoinProfileSetupVC.swift */; };
+		849C926720324F8D009B3247 /* CoinProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C926620324F8D009B3247 /* CoinProfile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		849C925B20314B22009B3247 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		849C925D20314C0F009B3247 /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		849C925F20317C5F009B3247 /* CoinProfileSetupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinProfileSetupVC.swift; sourceTree = "<group>"; };
+		849C926620324F8D009B3247 /* CoinProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinProfile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				849C926120324C94009B3247 /* CoinProfile */,
 				849C926420324CD7009B3247 /* Account */,
 				849C925B20314B22009B3247 /* Constants.swift */,
+				849C926520324F7E009B3247 /* Model */,
 				849C925D20314C0F009B3247 /* BaseVC.swift */,
 				849C9259202EAB65009B3247 /* Extensions.swift */,
 				84521661202E9772001A1F15 /* Assets.xcassets */,
@@ -115,6 +118,14 @@
 				849C9257202EA918009B3247 /* AccountRootVC.swift */,
 			);
 			path = Account;
+			sourceTree = "<group>";
+		};
+		849C926520324F7E009B3247 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				849C926620324F8D009B3247 /* CoinProfile.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +210,7 @@
 				849C925C20314B22009B3247 /* Constants.swift in Sources */,
 				84521659202E9772001A1F15 /* AppDelegate.swift in Sources */,
 				849C926020317C5F009B3247 /* CoinProfileSetupVC.swift in Sources */,
+				849C926720324F8D009B3247 /* CoinProfile.swift in Sources */,
 				849C9258202EA918009B3247 /* AccountRootVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

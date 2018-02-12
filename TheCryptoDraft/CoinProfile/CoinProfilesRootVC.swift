@@ -45,10 +45,13 @@ class CoinProfilesRootVC: BaseVC {
             textField.placeholder = "Enter Coin Profile Name"
         }
         let submitAction = UIAlertAction(title: "Submit", style: .default, handler: { [weak self] alert in
+            // TODO: text validation.  Ensure characters only and character length is in between 1-20?
             if let coinProfileName = coinProfileNamingAlertController.textFields?[0].text {
                 print(coinProfileName)
                 let coinProfileSetupVC = CoinProfileSetupVC()
                 coinProfileSetupVC.title = coinProfileName
+                coinProfileSetupVC.coinProfileDelegate = self
+                coinProfileSetupVC.coinProfileName = coinProfileName
                 self?.navigationController?.pushViewController(coinProfileSetupVC, animated: true)
             }
         })
@@ -56,6 +59,12 @@ class CoinProfilesRootVC: BaseVC {
         coinProfileNamingAlertController.addAction(submitAction)
         coinProfileNamingAlertController.addAction(cancelAction)
         present(coinProfileNamingAlertController, animated: true, completion: nil)
+    }
+}
+
+extension CoinProfilesRootVC: CoinProfileDelegate {
+    func coinProfileWasCreated(profile: CoinProfile) {
+        print(profile.profileName)
     }
 }
 

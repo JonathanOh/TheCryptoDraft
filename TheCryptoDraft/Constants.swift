@@ -13,3 +13,14 @@ class Colors {
     static let DarkGrayText: UIColor = UIColor(red: 100.0/255.0, green: 100.0/255.0, blue: 100.0/255.0, alpha: 1)
     static let TCDBlue: UIColor = UIColor(red: 0.0/255.0, green: 162.0/255.0, blue: 229.0/255.0, alpha: 1)//0,181,255
 }
+
+enum Coin: String {
+    case BTC
+    case ETH
+    case XRP
+    case VEN
+    case TRX
+    case WTC
+    case REQ
+    case ICX
+}
