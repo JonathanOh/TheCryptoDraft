@@ -70,19 +70,51 @@
 			children = (
 				84521658202E9772001A1F15 /* AppDelegate.swift */,
 				8452165E202E9772001A1F15 /* Main.storyboard */,
-				849C9251202EA89F009B3247 /* JoinLeagueRootVC.swift */,
-				849C925D20314C0F009B3247 /* BaseVC.swift */,
-				849C9253202EA8B7009B3247 /* YourLeagueRootVC.swift */,
-				849C9255202EA90D009B3247 /* CoinProfilesRootVC.swift */,
-				849C925F20317C5F009B3247 /* CoinProfileSetupVC.swift */,
-				849C9257202EA918009B3247 /* AccountRootVC.swift */,
-				849C9259202EAB65009B3247 /* Extensions.swift */,
+				849C926220324CB3009B3247 /* JoinLeague */,
+				849C926320324CC5009B3247 /* YourLeagues */,
+				849C926120324C94009B3247 /* CoinProfile */,
+				849C926420324CD7009B3247 /* Account */,
 				849C925B20314B22009B3247 /* Constants.swift */,
+				849C925D20314C0F009B3247 /* BaseVC.swift */,
+				849C9259202EAB65009B3247 /* Extensions.swift */,
 				84521661202E9772001A1F15 /* Assets.xcassets */,
 				84521663202E9772001A1F15 /* LaunchScreen.storyboard */,
 				84521666202E9772001A1F15 /* Info.plist */,
 			);
 			path = TheCryptoDraft;
+			sourceTree = "<group>";
+		};
+		849C926120324C94009B3247 /* CoinProfile */ = {
+			isa = PBXGroup;
+			children = (
+				849C9255202EA90D009B3247 /* CoinProfilesRootVC.swift */,
+				849C925F20317C5F009B3247 /* CoinProfileSetupVC.swift */,
+			);
+			path = CoinProfile;
+			sourceTree = "<group>";
+		};
+		849C926220324CB3009B3247 /* JoinLeague */ = {
+			isa = PBXGroup;
+			children = (
+				849C9251202EA89F009B3247 /* JoinLeagueRootVC.swift */,
+			);
+			path = JoinLeague;
+			sourceTree = "<group>";
+		};
+		849C926320324CC5009B3247 /* YourLeagues */ = {
+			isa = PBXGroup;
+			children = (
+				849C9253202EA8B7009B3247 /* YourLeagueRootVC.swift */,
+			);
+			path = YourLeagues;
+			sourceTree = "<group>";
+		};
+		849C926420324CD7009B3247 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				849C9257202EA918009B3247 /* AccountRootVC.swift */,
+			);
+			path = Account;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
