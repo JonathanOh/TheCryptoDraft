@@ -20,6 +20,7 @@
 		849C925E20314C0F009B3247 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C925D20314C0F009B3247 /* BaseVC.swift */; };
 		849C926020317C5F009B3247 /* CoinProfileSetupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C925F20317C5F009B3247 /* CoinProfileSetupVC.swift */; };
 		849C926720324F8D009B3247 /* CoinProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C926620324F8D009B3247 /* CoinProfile.swift */; };
+		849C926920325E77009B3247 /* CoinProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C926820325E77009B3247 /* CoinProfileCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		849C925D20314C0F009B3247 /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		849C925F20317C5F009B3247 /* CoinProfileSetupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinProfileSetupVC.swift; sourceTree = "<group>"; };
 		849C926620324F8D009B3247 /* CoinProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinProfile.swift; sourceTree = "<group>"; };
+		849C926820325E77009B3247 /* CoinProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinProfileCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 			children = (
 				849C9255202EA90D009B3247 /* CoinProfilesRootVC.swift */,
 				849C925F20317C5F009B3247 /* CoinProfileSetupVC.swift */,
+				849C926820325E77009B3247 /* CoinProfileCell.swift */,
 			);
 			path = CoinProfile;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 				849C926020317C5F009B3247 /* CoinProfileSetupVC.swift in Sources */,
 				849C926720324F8D009B3247 /* CoinProfile.swift in Sources */,
 				849C9258202EA918009B3247 /* AccountRootVC.swift in Sources */,
+				849C926920325E77009B3247 /* CoinProfileCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
