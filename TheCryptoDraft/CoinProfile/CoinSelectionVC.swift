@@ -1,5 +1,5 @@
 //
-//  CoinPickerVC.swift
+//  CoinSelectionVC.swift
 //  TheCryptoDraft
 //
 //  Created by admin on 2/12/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CoinPickerVC: UIViewController {
+class CoinSelectionVC: UIViewController {
     let topInfoView = UIView()
     let budgetLabel = UILabel()
     let optionsTableView = UITableView()
@@ -16,7 +16,7 @@ class CoinPickerVC: UIViewController {
     var coinProfile: CoinProfile?
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Add Coin"
+        title = "Coin Selection"
         view.backgroundColor = COLORS.LightGrayBackground
         optionsTableView.register(UITableViewCell.self, forCellReuseIdentifier: "addCoinCell")
         // Do any additional setup after loading the view.
@@ -29,7 +29,12 @@ class CoinPickerVC: UIViewController {
     }
 
     func setupNavigationBar() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(saveTapped))
+        navigationItem.setHidesBackButton(true, animated: true)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(backTapped))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add Coin", style: .plain, target: self, action: #selector(saveTapped))
+    }
+    @objc func backTapped() {
+        navigationController?.popViewController(animated: true)
     }
     @objc func saveTapped() {
         navigationController?.popViewController(animated: true)
@@ -73,7 +78,7 @@ class CoinPickerVC: UIViewController {
     }
 }
 
-extension CoinPickerVC: UITableViewDataSource {
+extension CoinSelectionVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 2
     }
@@ -106,4 +111,4 @@ extension CoinPickerVC: UITableViewDataSource {
         fadeInPickerView.animateScrollingTable(shouldScrollIn: true)
     }
 }
-extension CoinPickerVC: UITableViewDelegate {}
+extension CoinSelectionVC: UITableViewDelegate {}

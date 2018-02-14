@@ -105,9 +105,9 @@ extension CoinProfileSetupVC: UITableViewDelegate {
         let totalCoinsInPortfolio: Int = coinProfile?.coinsInPortfolio.count ?? 0
         let isLastCell = indexPath.row == totalCoinsInPortfolio
         if isLastCell {
-            let coinPickerVC = CoinPickerVC()
-            coinPickerVC.coinProfile = coinProfile
-            navigationController?.pushViewController(coinPickerVC, animated: true)
+            let coinSelectionVC = CoinSelectionVC()
+            coinSelectionVC.coinProfile = coinProfile
+            navigationController?.pushViewController(coinSelectionVC, animated: true)
         }
         tableView.deselectRow(at: indexPath, animated: true
         )
