@@ -11,7 +11,7 @@ import UIKit
 extension UINavigationController {
     class func setupNavigationControllerWith(title: String, navigationController: UINavigationController?) {
         if let navigationController = navigationController {
-            navigationController.navigationBar.barTintColor = Colors.TCDBlue
+            navigationController.navigationBar.barTintColor = COLORS.TCDBlue
             navigationController.navigationBar.isTranslucent = false
             navigationController.navigationBar.tintColor = .white
             let textAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]//[NSAttributedStringKey.foregroundColor:UIColor.red]

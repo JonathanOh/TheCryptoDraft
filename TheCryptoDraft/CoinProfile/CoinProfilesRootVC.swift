@@ -50,7 +50,7 @@ class CoinProfilesRootVC: BaseVC {
         noCoinTextLabel.textAlignment = .center
         noCoinTextLabel.lineBreakMode = .byWordWrapping
         noCoinTextLabel.numberOfLines = 0
-        noCoinTextLabel.textColor = Colors.DarkGrayText
+        noCoinTextLabel.textColor = COLORS.DarkGrayText
         noCoinTextLabel.text = "Add a coin profile by tapping \"+\" on the top right."
         
         view.addSubview(noCoinTextLabel)
@@ -102,6 +102,13 @@ extension CoinProfilesRootVC: UITableViewDelegate {
         coinProfileSetupVC.coinProfile = usersCoinProfiles[indexPath.row]
         tableView.deselectRow(at: indexPath, animated: true)
         navigationController?.pushViewController(coinProfileSetupVC, animated: true)
+    }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            usersCoinProfiles.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+        if usersCoinProfiles.isEmpty { updateCoinProfileTable() }
     }
 }
 

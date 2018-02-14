@@ -33,9 +33,13 @@ class CoinProfileSetupVC: BaseVC {
     func setupViews() {
         view.addSubview(coinSelectionTableView)
         view.addSubview(topInfoView)
-        
+        registerCells()
         setupCoinSelectionTableView()
         setupTopInfoView()
+    }
+    
+    func registerCells() {
+        coinSelectionTableView.register(AddACoinLastCell.self, forCellReuseIdentifier: AddACoinLastCell.addACoinLastCellIdentifier)
     }
     
     func setupTopInfoView() {
@@ -45,7 +49,7 @@ class CoinProfileSetupVC: BaseVC {
         topInfoView.constrainLeftTo(anchor: view.leftAnchor)
         topInfoView.constrainRightTo(anchor: view.rightAnchor)
         topInfoView.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        view.layoutIfNeeded()
+        //view.layoutIfNeeded()
         topInfoView.layer.shadowColor = UIColor.black.cgColor
         topInfoView.layer.shadowOpacity = 1
         topInfoView.layer.shadowOffset = CGSize.zero
@@ -55,7 +59,8 @@ class CoinProfileSetupVC: BaseVC {
         numberFormatter.numberStyle = NumberFormatter.Style.decimal
         let formattedNumber = numberFormatter.string(from: NSNumber(floatLiteral: coinProfile?.remainingBudget ?? 0))
         budgetLabel.text = "$\(formattedNumber ?? "") remaining budget"
-        budgetLabel.textColor = Colors.DarkGrayText
+        budgetLabel.textColor = COLORS.DarkGrayText
+        budgetLabel.font = FONTS.BoldHelveticaNeue18
         budgetLabel.textAlignment = .center
         topInfoView.addSubview(budgetLabel)
         budgetLabel.constrainWidthTo(dimension: topInfoView.widthAnchor, multiplier: 0.9)
@@ -73,11 +78,9 @@ class CoinProfileSetupVC: BaseVC {
     }
     
     func setupNavigationBar() {
-
         navigationItem.setHidesBackButton(true, animated: true)
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: editMode ? "Back" : "Cancel", style: .plain, target: self, action: #selector(cancelTapped))
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: editMode ? "Update" : "Submit", style: .plain, target: self, action: #selector(submitTapped))
-        
     }
     
     @objc func cancelTapped() {
@@ -90,14 +93,35 @@ class CoinProfileSetupVC: BaseVC {
             print("SOMETHING FUCKED")
             return
         }
-        coinProfileDelegate?.coinProfileWasCreated(profile: coinProfile)
+        if !editMode { // Only create a new profile when we are not in edit mode.
+            coinProfileDelegate?.coinProfileWasCreated(profile: coinProfile)
+        }
         navigationController?.popViewController(animated: true)
     }
 }
 
-extension CoinProfileSetupVC: UITableViewDelegate {}
+extension CoinProfileSetupVC: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let totalCoinsInPortfolio: Int = coinProfile?.coinsInPortfolio.count ?? 0
+        let isLastCell = indexPath.row == totalCoinsInPortfolio
+        if isLastCell {
+            let coinPickerVC = CoinPickerVC()
+            coinPickerVC.coinProfile = coinProfile
+            navigationController?.pushViewController(coinPickerVC, animated: true)
+        }
+        tableView.deselectRow(at: indexPath, animated: true
+        )
+    }
+}
 extension CoinProfileSetupVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let totalCoinsInPortfolio: Int = coinProfile?.coinsInPortfolio.count ?? 0
+        let isLastCell = indexPath.row == totalCoinsInPortfolio
+        if isLastCell {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: AddACoinLastCell.addACoinLastCellIdentifier) as? AddACoinLastCell else { return UITableViewCell() }
+            cell.setupCell()
+            return cell
+        }
         return UITableViewCell()
     }
     func numberOfSections(in tableView: UITableView) -> Int {

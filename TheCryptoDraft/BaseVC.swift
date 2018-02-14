@@ -11,6 +11,6 @@ import UIKit
 class BaseVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = Colors.LightGrayBackground
+        view.backgroundColor = COLORS.LightGrayBackground
     }
 }
